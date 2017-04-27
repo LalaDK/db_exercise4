@@ -1,0 +1,1 @@
+Tweet.distinct(:user).count

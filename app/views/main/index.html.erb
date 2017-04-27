@@ -1,0 +1,133 @@
+<div class="col-xs-12">
+  <div class="col-xs-6 col-xs-offset-3">
+    <br><br><br>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h4>How many Twitter users are in our database?</h4>
+      </div>
+      <div class="panel-body">
+        <%= @user_count %>
+      </div>
+    </div>
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h4>Which Twitter users link the most to other Twitter users?</h4>
+      </div>
+      <div class="panel-body">
+        <table class="table table-striped table bordered">
+          <thead>
+            <tr>
+              <th>Username</th>
+              <th>Links</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @users_mentioning_most_users.to_a.each do |user| %>
+              <tr>
+                <td><%= user["_id"]  %></td>
+                <td><%= user["matches"]  %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h4>Who is are the most mentioned Twitter users?</h4>
+      </div>
+      <div class="panel-body">
+        <table class="table table-striped table bordered">
+          <thead>
+            <tr>
+              <th>Username</th>
+              <th>Occurrences</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @most_mentioned_users.to_a.each do |user| %>
+              <tr>
+                <td><%= user["_id"]  %></td>
+                <td><%= user["occurrences"]  %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h4>Who are the most active Twitter users?</h4>
+      </div>
+      <div class="panel-body">
+        <table class="table table-striped table bordered">
+          <thead>
+            <tr>
+              <th>Username</th>
+              <th>Tweets</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @most_active_users.to_a.each do |user| %>
+              <tr>
+                <td><%= user["_id"]  %></td>
+                <td><%= user["tweets"]  %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h4>Who are the five most grumpy users (most negative tweets)?</h4>
+      </div>
+      <div class="panel-body">
+        <table class="table table-striped table bordered">
+          <thead>
+            <tr>
+              <th>Username</th>
+              <th>Tweets</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @most_negative_tweets.to_a.each do |user| %>
+              <tr>
+                <td><%= user["_id"]  %></td>
+                <td><%= user["polarity"]  %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h4>Who are the five most happy users (most positive tweets)?</h4>
+      </div>
+      <div class="panel-body">
+        <table class="table table-striped table bordered">
+          <thead>
+            <tr>
+              <th>Username</th>
+              <th>Tweets</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @most_positive_tweets.to_a.each do |user| %>
+              <tr>
+                <td><%= user["_id"]  %></td>
+                <td><%= user["polarity"]  %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

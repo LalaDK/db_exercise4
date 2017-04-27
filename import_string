@@ -1,0 +1,1 @@
+mongoimport --db=exercise4 --file training.1600000.processed.noemoticon.csv --type=csv --collection=tweets --headerline
