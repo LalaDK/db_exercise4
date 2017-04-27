@@ -3,9 +3,15 @@
 Mads Dam Eckardt Jensen & Andreas Uldall Leonhard
 
 ## How we did
+We use MongoDB 3.4 for our project. To import the .csv-file we constructed the following command:
+*mongoimport --db=exercise4 --file training.1600000.processed.noemoticon.csv --type=csv --collection=tweets --headerline*
+
+We choosed to make a Ruby on Rails project in order to present a web-based UI. We have one model in our project *tweet.rb*, which is connected to the collection tweets in our database. We use this model to query the database.  The current configuration expects the database to be named *exercise4* and the collection of the tweets to be named *tweets*. 
+
+For all the exercises we utilize MongoDB’s aggregation framework.  All our queries are executed from the controller */app/controllers/main_controller.rb*. 
+
 
 ## Results
-
 #### How many Twitter users are in our database?
 659774
 
@@ -79,3 +85,10 @@ Mads Dam Eckardt Jensen & Andreas Uldall Leonhard
 | emmasaur28    | 4        |
 | Wingman29     | 4        |
 | ersle         | 4        |
+
+## Screenshots
+![](screenhots/screen1.png) 
+
+![](screenhots/screen2.png) 
+
+![](screenhots/screen3.png) 
