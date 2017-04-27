@@ -87,8 +87,8 @@ For all the exercises we utilize MongoDB’s aggregation framework.  All our que
 | ersle         | 4        |
 
 ## Screenshots
-![](db_exercise4/screenshots/screen1.png) 
+![](https://raw.githubusercontent.com/LalaDK/db_exercise4/master/screenshots/screen1.png)
 
-![](db_exercise4/screenshots/screen1.png)
+![](https://raw.githubusercontent.com/LalaDK/db_exercise4/master/screenshots/screen2.png)
 
-![](db_exercise4/screenshots/screen1.png) 
+![](https://raw.githubusercontent.com/LalaDK/db_exercise4/master/screenshots/screen3.png) 
